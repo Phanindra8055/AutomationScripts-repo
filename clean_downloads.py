@@ -1,7 +1,7 @@
 import os
 import shutil
 
-os.chdir("/home/phanindra/Downloads/")
+os.chdir("/path/to/your/downloads/folder")
 
 
 img_formats = [
@@ -129,10 +129,10 @@ def is_audio(file_name):
 
 for f in os.listdir():
     if is_image(f):
-        shutil.move(f"{f}", f"/home/phanindra/Pictures/{f}")
+        shutil.move(f"{f}", f"/path/to/your/images/folder/{f}")
     elif is_video(f):
-        shutil.move(f"./{f}", f"/home/phanindra/Videos/{f}")
+        shutil.move(f"./{f}", f"/path/to/your/videos/folder/{f}")
     elif is_doc(f):
-        shutil.move(f"./{f}", f"/home/phanindra/Documents/{f}")
+        shutil.move(f"./{f}", f"/path/to/your/documents/folder/{f}")
     elif is_audio(f):
-        shutil.move(f"./{f}", f"/home/phanindra/Music/{f}")
+        shutil.move(f"./{f}", f"/path/to/your/audios/folder/{f}")
